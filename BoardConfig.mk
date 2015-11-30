@@ -39,9 +39,7 @@ TARGET_PREBUILT_KERNEL := device/lge/ls990/kernel
 # Kernel
 #TARGET_KERNEL_CONFIG := ls990_defconfig
 
-# Kernel
-#TARGET_KERNEL_CONFIG := cyanogenmod_d855_defconfig
-TARGET_KERNEL_CONFIG := ls990_defconfig
+
 
 # Kernel & ToolChains
 #TARGET_KERNEL_CONFIG := cyanogenmod_d851_defconfig
@@ -54,7 +52,7 @@ TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-6.0
 #TARGET_GCC_VERSION := 4.8
 #TARGET_TOOLS_PREFIX := prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8/bin/arm-linux-androideabi-
 # RR Config Flags
-TARGET_TC_ROM := 4.8
+TARGET_TC_ROM := 4.9
 #TARGET_TC_KERNEL := SM-4.9
 TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
 #TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
