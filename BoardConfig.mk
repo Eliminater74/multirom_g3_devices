@@ -1,3 +1,8 @@
+#####################################################################################
+## Modified for MultiRom F400 Korean                                               ##
+##                                                                                 ##
+#####################################################################################
+
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_CPU_ABI := armeabi-v7a
@@ -35,10 +40,24 @@ TARGET_PREBUILT_KERNEL := device/lge/f400/kernel
 # use this instead
 # BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
-BOARD_BOOTIMAGE_PARTITION_SIZE := 14485760
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16485760
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1073741824
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
+# Kernel & ToolChains
+#TARGET_KERNEL_CONFIG := f400_defconfig
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-6.0
+#TARGET_KERNEL_CROSS_COMPILE_PREFIX := prebuilts/gcc/linux-x86/arm/arm-linux-gnueabi-4.9/bin/arm-eabi-
+# Rom ToolChains
+TARGET_ROM_CUSTOM_TOOLCHAIN := arm-linux-androideabi-5.2
+#TARGET_GCC_VERSION := 4.8
+#TARGET_TOOLS_PREFIX := prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8/bin/arm-linux-androideabi-
+# RR Config Flags
+#TARGET_TC_ROM := SM-4.8
+#TARGET_TC_KERNEL := SM-4.9
+#TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+#TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
+
+BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216		# 16M
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216		# 16M
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2692743168		# 2568M Or 2.51G
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 27325360128	# 26059.49M or 25.45G
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 
@@ -53,3 +72,35 @@ TW_INCLUDE_JB_CRYPTO := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_REAL_SDCARD := true
+
+# Edited for TWRP Recovery
+DEVICE_RESOLUTION := 1440x2560
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_NO_USB_STORAGE := true
+TW_INCLUDE_JB_CRYPTO := true
+TW_INCLUDE_CRYPTO := true
+BOARD_SUPPRESS_SECURE_ERASE := true
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
+TW_BRIGHTNESS_PATH := "/sys/devices/mdp.0/qcom\x2cmdss_fb_primary.175/leds/lcd-backlight/brightness"
+TW_MAX_BRIGHTNESS := 255
+TW_SCREEN_BLANK_ON_BOOT := true
+# TW_NO_SCREEN_TIMEOUT := false
+
+# MultiROM
+MR_INPUT_TYPE := type_b
+MR_INIT_DEVICES := device/lge/f400/multirom/mr_init_devices.c
+MR_RD_ADDR := 0x2200000
+MR_DPI := xhdpi
+MR_DPI_MUL := 1.5
+MR_FSTAB := device/lge/f400/multirom/twrp.fstab
+MR_KEXEC_MEM_MIN := 0x0ff00000
+MR_KEXEC_DTB := true
+MR_USE_MROM_FSTAB := true
+MR_DPI_FONT := 420
+MR_DEFAULT_BRIGHTNESS := 80
+#MR_CONTINUOUS_FB_UPDATE := true
+
+#MultiRom Hooks, So that we can run stock roms as secondary
+MR_DEVICE_HOOKS := device/lge/f400/multirom/mr_hooks.c
+MR_DEVICE_HOOKS_VER := 4

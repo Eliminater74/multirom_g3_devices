@@ -32,9 +32,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     device/lge/f400/kernel:kernel \
+    device/lge/f400/dtb:dtb \
     device/lge/f400/img_info:img_info
+    device/lge/f400/multirom/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
+    device/lge/f400/multirom/sign:recovery/root/res/sign
 
 PRODUCT_COPY_FILES += device/lge/f400/fstab.g3:recovery/root/fstab.g3
+PRODUCT_COPY_FILES += device/lge/f400/multirom/twrp.fstab:recovery/root/etc/twrp.fstab
 
 PRODUCT_NAME := omni_f400
 PRODUCT_DEVICE := f400
