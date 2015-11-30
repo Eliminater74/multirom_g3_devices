@@ -1,5 +1,5 @@
 #
-# Copyright 2012 The Android Open Source Project
+# Copyright 2014 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -33,8 +33,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/lge/vs985/kernel:kernel \
     device/lge/vs985/dtb:dtb
+    device/lge/vs985/img_info:img_info \
+    device/lge/vs985/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
+    device/lge/vs985/multirom/sign:recovery/root/res/sign
 
 PRODUCT_COPY_FILES += device/lge/vs985/fstab.g3:recovery/root/fstab.g3
+PRODUCT_COPY_FILES += device/lge/vs985/multirom/twrp.fstab:recovery/root/etc/twrp.fstab
 
 PRODUCT_NAME := omni_vs985
 PRODUCT_DEVICE := vs985
