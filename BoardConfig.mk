@@ -45,18 +45,18 @@ TARGET_KERNEL_CONFIG := d855_defconfig
 
 # Kernel & ToolChains
 #TARGET_KERNEL_CONFIG := cyanogenmod_d851_defconfig
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.8
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-6.0
 
 #TARGET_KERNEL_CROSS_COMPILE_PREFIX := prebuilts/gcc/linux-x86/arm/arm-linux-gnueabi-4.9/bin/arm-eabi-
 # Rom ToolChains
-#TARGET_ROM_CUSTOM_TOOLCHAIN := arm-linux-androideabi-4.9
+TARGET_ROM_CUSTOM_TOOLCHAIN := arm-linux-androideabi-5.2
 
 #TARGET_GCC_VERSION := 4.8
 #TARGET_TOOLS_PREFIX := prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8/bin/arm-linux-androideabi-
 # RR Config Flags
-TARGET_TC_ROM := 4.8
+#TARGET_TC_ROM := 4.8
 #TARGET_TC_KERNEL := SM-4.9
-TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+#TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
 #TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
 
 # Partitions
@@ -93,7 +93,7 @@ MR_INIT_DEVICES := device/lge/d855/multirom/mr_init_devices.c
 MR_RD_ADDR := 0x2200000
 MR_DPI := xhdpi
 MR_DPI_MUL := 1.5
-MR_FSTAB := device/lge/d855/twrp.fstab
+MR_FSTAB := device/lge/d855/multirom/twrp.fstab
 MR_KEXEC_MEM_MIN := 0x0ff00000
 MR_KEXEC_DTB := true
 MR_USE_MROM_FSTAB := true
@@ -102,6 +102,6 @@ MR_DEFAULT_BRIGHTNESS := 80
 #MR_CONTINUOUS_FB_UPDATE := true
 
 #MultiRom Hooks, So that we can run stock roms as secondary
-MR_DEVICE_HOOKS := device/lge/d855/mr_hooks.c
+MR_DEVICE_HOOKS := device/lge/d855/multirom/mr_hooks.c
 MR_DEVICE_HOOKS_VER := 4
 
