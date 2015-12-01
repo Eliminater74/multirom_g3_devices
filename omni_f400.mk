@@ -33,7 +33,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/lge/f400/kernel:kernel \
     device/lge/f400/dtb:dtb \
-    device/lge/f400/img_info:img_info
+    device/lge/f400/img_info:img_info \
     device/lge/f400/multirom/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
     device/lge/f400/multirom/sign:recovery/root/res/sign
 
