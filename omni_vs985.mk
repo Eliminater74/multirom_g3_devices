@@ -32,7 +32,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     device/lge/vs985/kernel:kernel \
-    device/lge/vs985/dtb:dtb
+    device/lge/vs985/dtb:dtb \
     device/lge/vs985/img_info:img_info \
     device/lge/vs985/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
     device/lge/vs985/multirom/sign:recovery/root/res/sign
