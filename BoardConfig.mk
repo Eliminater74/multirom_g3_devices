@@ -93,7 +93,7 @@ MR_INIT_DEVICES := device/lge/d855/multirom/mr_init_devices.c
 MR_RD_ADDR := 0x2200000
 MR_DPI := xhdpi
 MR_DPI_MUL := 1.5
-MR_FSTAB := device/lge/d855/twrp.fstab
+MR_FSTAB := device/lge/d855/multirom/twrp.fstab
 MR_KEXEC_MEM_MIN := 0x0ff00000
 MR_KEXEC_DTB := true
 MR_USE_MROM_FSTAB := true
@@ -102,6 +102,6 @@ MR_DEFAULT_BRIGHTNESS := 80
 #MR_CONTINUOUS_FB_UPDATE := true
 
 #MultiRom Hooks, So that we can run stock roms as secondary
-MR_DEVICE_HOOKS := device/lge/d855/mr_hooks.c
+MR_DEVICE_HOOKS := device/lge/d855/multirom/mr_hooks.c
 MR_DEVICE_HOOKS_VER := 4
 
