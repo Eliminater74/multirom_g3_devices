@@ -77,21 +77,22 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 ### TWRP Recovery Edition: Updated: 02/07/2016   ###
 ####################################################
 
-TW_INTERNAL_STORAGE_PATH := "/data/media"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+# TW_INTERNAL_STORAGE_PATH := "/data/media"
+# TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+# TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+# TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 # TW_EXTERNAL_STORAGE_PATH := "/usb-otg"
 # TW_EXTERNAL_STORAGE_MOUNT_POINT := "usb-otg"
 
 # TW_INCLUDE_JPEG := true
 TW_INCLUDE_NTFS_3G := true
+TW_FLASH_FROM_STORAGE := true
 
 # Edited for TWRP Recovery
 DEVICE_RESOLUTION := 1440x2560
 # TW_THEME := portrait_hdpi
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TW_NO_USB_STORAGE := true
+# TW_NO_USB_STORAGE := true
 # TW_INCLUDE_JB_CRYPTO := true
 # TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_L_CRYPTO := true
