@@ -31,22 +31,22 @@ PRODUCT_PACKAGES += \
     charger
 
 PRODUCT_COPY_FILES += \
-    device/lge/d855/kernel:kernel \
-    device/lge/d855/dtb:dtb \
-    device/lge/d855/img_info:img_info \
-    device/lge/d855/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
-    device/lge/d855/multirom/sign:recovery/root/res/sign
+    device/lge/d855_lowmem/kernel:kernel \
+    device/lge/d855_lowmem/dtb:dtb \
+    device/lge/d855_lowmem/img_info:img_info \
+    device/lge/d855_lowmem/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
+    device/lge/d855_lowmem/multirom/sign:recovery/root/res/sign
 
-PRODUCT_COPY_FILES += device/lge/d855/fstab.g3:recovery/root/fstab.g3
-PRODUCT_COPY_FILES += device/lge/d855/multirom/twrp.fstab:recovery/root/etc/twrp.fstab
+PRODUCT_COPY_FILES += device/lge/d855_lowmem/fstab.g3:recovery/root/fstab.g3
+PRODUCT_COPY_FILES += device/lge/d855_lowmem/multirom/twrp.fstab:recovery/root/etc/twrp.fstab
 
-PRODUCT_NAME := omni_d855
+PRODUCT_NAME := omni_d855_lowmem
 PRODUCT_DEVICE := d855
 PRODUCT_BRAND := LG
 PRODUCT_MODEL := G3
 PRODUCT_MANUFACTURER := LG
 
 # Kernel inline build
-#TARGET_KERNEL_CONFIG := d855_defconfig
-#TARGET_VARIANT_CONFIG := d855_defconfig
-#TARGET_SELINUX_CONFIG := d855_defconfig
+#TARGET_KERNEL_CONFIG := d855_lowmem_defconfig
+#TARGET_VARIANT_CONFIG := d855_lowmem_defconfig
+#TARGET_SELINUX_CONFIG := d855_lowmem_defconfig
