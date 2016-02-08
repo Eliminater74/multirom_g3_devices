@@ -34,8 +34,11 @@ PRODUCT_COPY_FILES += \
     device/lge/d852/kernel:kernel \
     device/lge/d852/dtb:dtb \
     device/lge/d852/img_info:img_info
+    device/lge/d852/multirom/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
+    device/lge/d852/multirom/sign:recovery/root/res/sign
 
 PRODUCT_COPY_FILES += device/lge/d852/fstab.g3:recovery/root/fstab.g3
+PRODUCT_COPY_FILES += device/lge/d852/multirom/twrp.fstab:recovery/root/etc/twrp.fstab
 
 PRODUCT_NAME := omni_d852
 PRODUCT_DEVICE := d852
