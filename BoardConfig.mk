@@ -123,7 +123,7 @@ TW_THEME := portrait_hdpi
 TWRP_INCLUDE_LOGCAT := true
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
+# RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_HAS_DOWNLOAD_MODE := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 DEVICE_RESOLUTION := 1440x2560
@@ -169,10 +169,13 @@ MR_KEXEC_DTB := true
 MR_USE_MROM_FSTAB := true
 MR_DPI_FONT := 420
 MR_DEFAULT_BRIGHTNESS := 80
-#MR_CONTINUOUS_FB_UPDATE := true
+# MR_CONTINUOUS_FB_UPDATE := true
+MR_PIXEL_FORMAT := "RGBX_8888"
+MR_ENCRYPTION := false
 MR_USE_QCOM_OVERLAY := true
 MR_QCOM_OVERLAY_HEADER := device/lge/d851/multirom/mr_qcom_overlay.h
 MR_QCOM_OVERLAY_CUSTOM_PIXEL_FORMAT := MDP_RGBX_8888
+TARGET_USERIMAGES_USE_F2FS := true
 
 #MultiRom Hooks, So that we can run stock roms as secondary
 MR_DEVICE_HOOKS := device/lge/d851/multirom/mr_hooks.c
@@ -182,4 +185,4 @@ MR_DEVICE_HOOKS_VER := 4
 # include device/qcom/sepolicy/sepolicy.mk
 
 # Enable Minikin text layout engine
-USE_MINIKIN := true
+# USE_MINIKIN := true

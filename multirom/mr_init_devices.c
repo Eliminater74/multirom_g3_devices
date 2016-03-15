@@ -8,7 +8,10 @@
 const char *mr_init_devices[] =
 {
 	"/sys/class/graphics/fb0",
+	"/sys/class/graphics/*",
+	
     "/sys/block/mmcblk0",
+    "/sys/block/mmcblk0rpmb",
     "/sys/module/mmc_core",
     "/sys/module/mmcblk",	
 	"/sys/class/misc/android_adb",
@@ -17,5 +20,7 @@ const char *mr_init_devices[] =
 	"/sys/class/misc/uinput",
 	"/sys/bus*",
 	"/sys/devices*",
+	
 NULL
+
 };
